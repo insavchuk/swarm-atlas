@@ -1,0 +1,30 @@
+jupyterlab == 4.1.6
+# now using scib-metrics instead of scib
+# comment out scipy/pandas if reenabling scib
+# scib == 1.1.5
+scib-metrics == 0.5.1
+scarches == 0.6.1
+scvi-tools == 1.1.2
+pymde == 0.1.18 # to compute embeddings 
+torch == 1.12.0
+
+igraph == 0.11.4
+scikit-learn == 1.4.2
+scikit-misc == 0.3.1 # Needed for scanpy
+jax == 0.4.26
+rich == 13.7.1
+scanpy == 1.10.1
+scipy == 1.13.0
+pandas == 2.2.2
+anndata == 0.10.7
+scipy == 1.13.0
+pandas == 2.2.2
+pynndescent == 0.5.12
+# utils
+openpyxl == 3.1.2
+nbconvert == 7.16.3
+# visualization
+seaborn == 0.13.2
+umap-learn == 0.5.6
+matplotlib == 3.8.4
+upsetplot == 0.9.0
