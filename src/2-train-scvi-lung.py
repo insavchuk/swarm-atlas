@@ -10,10 +10,9 @@ torch.set_float32_matmul_precision("high")
 # Define file names and paths for reading/writing
 in_data_dir = "/local/home/savchuki/projects/swarm-atlas/data"
 out_model_dir = "/local/home/savchuki/projects/swarm-atlas/results/scvi"
-in_filename = "lung-atlas-public-processed.h5ad"
-out_model_name = "scvi-lung.pt"
+in_filename = "lung-atlas-public-transplant-hvgs.h5ad"
+out_model_prefix = "scvi-transplant-"
 adata_path = os.path.join(in_data_dir, in_filename) # path to processed adata
-model_result_path = os.path.join(out_model_dir, out_model_name) # path to trained scvi model
 
 adata = sc.read(adata_path)
 
@@ -24,5 +23,5 @@ model = scvi.model.SCVI(adata, n_layers=2, n_latent=30, gene_likelihood="nb")
 print("-----TRAINING SCVI MODEL-----")
 model.train()
 
-model.save(out_model_dir, overwrite=True)
+model.save(out_model_dir, prefix=out_model_prefix, overwrite=True)
 print("-----SAVED SCVI MODEL-----")
